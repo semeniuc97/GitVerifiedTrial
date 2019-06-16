@@ -30,7 +30,7 @@ namespace GitVerifiedCommitTrying
 
         public void Print()
         {
-            Console.WriteLine(this.name + " " + this.company.name);
+            Console.WriteLine(this.name);
         }
     }
 

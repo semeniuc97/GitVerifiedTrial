@@ -5,6 +5,12 @@ namespace GitVerifiedCommitTrying
     class Person
     {
         private string name;
+        private Company company;
+
+        public Person()
+        {
+            this.company = new Company();
+        }
         public string Name
         {
             get
@@ -16,11 +22,16 @@ namespace GitVerifiedCommitTrying
             {
                 if (value.Length <= 6)
                 {
-                    this.name = value + " " + "additional";
+                    this.name = value + " " + "additional" + company.name;
                 }
             }
         }
         public int Age { get; set; }
+
+        public void Print()
+        {
+            Console.WriteLine(this.name);
+        }
     }
 
     class Program
